@@ -1,0 +1,431 @@
+object Form1: TForm1
+  Left = 451
+  Height = 321
+  Top = 196
+  Width = 721
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Serial Connect Tester V1.1 29/6/2025 14:08:56'
+  ClientHeight = 321
+  ClientWidth = 721
+  Position = poWorkAreaCenter
+  LCLVersion = '4.0.0.4'
+  OnCreate = FormCreate
+  object ComboBox1: TComboBox
+    Left = 64
+    Height = 23
+    Top = 6
+    Width = 104
+    ItemHeight = 15
+    ReadOnly = True
+    TabOrder = 0
+    OnEditingDone = ComboBox1EditingDone
+  end
+  object Button1: TButton
+    Left = 64
+    Height = 33
+    Top = 32
+    Width = 104
+    Caption = 'Refresh Port'
+    TabOrder = 1
+    OnClick = Button1Click
+  end
+  object Memo1: TMemo
+    Left = 401
+    Height = 225
+    Top = 50
+    Width = 142
+    Lines.Strings = (
+      'Memo1'
+    )
+    ReadOnly = True
+    ScrollBars = ssAutoBoth
+    TabOrder = 2
+  end
+  object ComboBox2: TComboBox
+    Left = 64
+    Height = 23
+    Top = 96
+    Width = 104
+    ItemHeight = 15
+    ReadOnly = True
+    TabOrder = 3
+    OnEditingDone = ComboBox2EditingDone
+  end
+  object ComboBox3: TComboBox
+    Left = 64
+    Height = 23
+    Top = 120
+    Width = 104
+    ItemHeight = 15
+    ReadOnly = True
+    TabOrder = 4
+    OnEditingDone = ComboBox3EditingDone
+  end
+  object ComboBox4: TComboBox
+    Left = 64
+    Height = 23
+    Top = 144
+    Width = 104
+    ItemHeight = 15
+    ReadOnly = True
+    TabOrder = 5
+    OnEditingDone = ComboBox4EditingDone
+  end
+  object ComboBox5: TComboBox
+    Left = 64
+    Height = 23
+    Top = 72
+    Width = 104
+    ItemHeight = 15
+    ReadOnly = True
+    TabOrder = 6
+    OnEditingDone = ComboBox5EditingDone
+  end
+  object Label1: TLabel
+    Left = 6
+    Height = 15
+    Top = 14
+    Width = 25
+    Caption = 'Port:'
+  end
+  object Label2: TLabel
+    Left = 6
+    Height = 15
+    Top = 80
+    Width = 53
+    Caption = 'BaudRate:'
+  end
+  object Label3: TLabel
+    Left = 6
+    Height = 15
+    Top = 104
+    Width = 41
+    Caption = 'DataBit:'
+  end
+  object Label4: TLabel
+    Left = 6
+    Height = 15
+    Top = 128
+    Width = 33
+    Caption = 'Parity:'
+  end
+  object Label5: TLabel
+    Left = 6
+    Height = 15
+    Top = 152
+    Width = 41
+    Caption = 'StopBit:'
+  end
+  object Edit1: TEdit
+    Left = 288
+    Height = 23
+    Top = 8
+    Width = 52
+    TabOrder = 7
+    Text = 'Edit1'
+    OnEditingDone = Edit1EditingDone
+  end
+  object Edit2: TEdit
+    Left = 288
+    Height = 23
+    Top = 32
+    Width = 52
+    TabOrder = 8
+    Text = 'Edit2'
+    OnEditingDone = Edit2EditingDone
+  end
+  object Edit3: TEdit
+    Left = 288
+    Height = 23
+    Top = 56
+    Width = 52
+    TabOrder = 9
+    Text = 'Edit3'
+    OnEditingDone = Edit3EditingDone
+  end
+  object Label6: TLabel
+    Left = 192
+    Height = 15
+    Top = 16
+    Width = 52
+    Caption = 'PLC Rack:'
+  end
+  object Label7: TLabel
+    Left = 192
+    Height = 15
+    Top = 40
+    Width = 47
+    Caption = 'PLC Slot:'
+  end
+  object Label8: TLabel
+    Left = 192
+    Height = 15
+    Top = 64
+    Width = 64
+    Caption = 'PLC Station:'
+  end
+  object Label9: TLabel
+    Left = 192
+    Height = 15
+    Top = 96
+    Width = 73
+    Caption = 'MemAddress:'
+  end
+  object Edit4: TEdit
+    Left = 288
+    Height = 23
+    Top = 88
+    Width = 52
+    TabOrder = 10
+    Text = 'Edit4'
+    OnEditingDone = Edit4EditingDone
+  end
+  object Label10: TLabel
+    Left = 192
+    Height = 15
+    Top = 120
+    Width = 76
+    Caption = 'ReadFunction:'
+  end
+  object Edit5: TEdit
+    Left = 288
+    Height = 23
+    Top = 112
+    Width = 52
+    TabOrder = 11
+    Text = 'Edit5'
+    OnEditingDone = Edit5EditingDone
+  end
+  object Label11: TLabel
+    Left = 192
+    Height = 15
+    Top = 144
+    Width = 66
+    Caption = 'SubElement:'
+  end
+  object Edit6: TEdit
+    Left = 288
+    Height = 23
+    Top = 136
+    Width = 52
+    TabOrder = 12
+    Text = 'Edit6'
+    OnEditingDone = Edit6EditingDone
+  end
+  object Edit7: TEdit
+    Left = 288
+    Height = 23
+    Top = 160
+    Width = 52
+    TabOrder = 13
+    Text = 'Edit7'
+    OnEditingDone = Edit7EditingDone
+  end
+  object Label12: TLabel
+    Left = 192
+    Height = 15
+    Top = 168
+    Width = 78
+    Caption = 'WriteFunction:'
+  end
+  object CheckBox1: TCheckBox
+    Left = 192
+    Height = 19
+    Top = 192
+    Width = 69
+    Caption = 'SwapByte'
+    TabOrder = 14
+    OnEditingDone = CheckBox1EditingDone
+  end
+  object CheckBox2: TCheckBox
+    Left = 192
+    Height = 19
+    Top = 216
+    Width = 83
+    Caption = 'SwapDWord'
+    TabOrder = 15
+    OnEditingDone = CheckBox2EditingDone
+  end
+  object CheckBox3: TCheckBox
+    Left = 192
+    Height = 19
+    Top = 240
+    Width = 75
+    Caption = 'SwapWord'
+    TabOrder = 16
+    OnEditingDone = CheckBox3EditingDone
+  end
+  object ComboBox6: TComboBox
+    Left = 248
+    Height = 23
+    Top = 264
+    Width = 104
+    ItemHeight = 15
+    ReadOnly = True
+    TabOrder = 17
+    OnEditingDone = ComboBox6EditingDone
+  end
+  object Label13: TLabel
+    Left = 192
+    Height = 15
+    Top = 272
+    Width = 45
+    Caption = 'TagType:'
+  end
+  object HMIEdit1: THMIEdit
+    Left = 401
+    Height = 23
+    Top = 24
+    Width = 142
+    Color = clWindow
+    Enabled = True
+    Font.Color = clWindowText
+    ParentFont = False
+    TabOrder = 18
+    NumberFormat = '#0.0'
+    PLCTag = Tag1
+    EnableMinValue = False
+    EnableMaxValue = False
+  end
+  object Label14: TLabel
+    Left = 401
+    Height = 15
+    Top = 8
+    Width = 31
+    Caption = 'Value:'
+  end
+  object Button2: TButton
+    Left = 6
+    Height = 43
+    Top = 176
+    Width = 138
+    Caption = 'Connect'
+    TabOrder = 19
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 6
+    Height = 38
+    Top = 224
+    Width = 138
+    Caption = 'Disconnect'
+    TabOrder = 20
+    OnClick = Button3Click
+  end
+  object Button4: TButton
+    Left = 280
+    Height = 73
+    Top = 186
+    Width = 72
+    Caption = 'Refresh Tag'
+    TabOrder = 21
+    OnClick = Button4Click
+  end
+  object Button5: TButton
+    Left = 401
+    Height = 33
+    Top = 280
+    Width = 146
+    Caption = 'Clear'
+    TabOrder = 22
+    OnClick = Button5Click
+  end
+  object Memo2: TMemo
+    Left = 552
+    Height = 225
+    Top = 50
+    Width = 142
+    Lines.Strings = (
+      'Memo1'
+    )
+    ReadOnly = True
+    ScrollBars = ssAutoBoth
+    TabOrder = 23
+  end
+  object Button6: TButton
+    Left = 552
+    Height = 33
+    Top = 280
+    Width = 146
+    Caption = 'Clear'
+    TabOrder = 24
+    OnClick = Button6Click
+  end
+  object Button7: TButton
+    Left = 6
+    Height = 40
+    Top = 264
+    Width = 138
+    Caption = 'Help'
+    TabOrder = 25
+    OnClick = Button7Click
+  end
+  object ComboBox7: TComboBox
+    Left = 552
+    Height = 23
+    Top = 24
+    Width = 142
+    ItemHeight = 15
+    ItemIndex = 1
+    Items.Strings = (
+      '#0'
+      '#0.0'
+      '#0.00'
+      '#0.000'
+      '#0.0000'
+    )
+    ReadOnly = True
+    TabOrder = 26
+    Text = '#0.0'
+    OnEditingDone = ComboBox7EditingDone
+  end
+  object Label15: TLabel
+    Left = 555
+    Height = 15
+    Top = 3
+    Width = 51
+    Caption = 'Precision:'
+  end
+  object SerialPortDriver1: TSerialPortDriver
+    Timeout = 100
+    BaudRate = br9600
+    AcceptAnyPortName = True
+    OnCommPortOpened = SerialPortDriver1CommPortOpened
+    OnCommPortOpenError = SerialPortDriver1CommPortOpenError
+    OnCommPortClosed = SerialPortDriver1CommPortClosed
+    OnCommPortCloseError = SerialPortDriver1CommPortCloseError
+    OnCommErrorReading = SerialPortDriver1CommErrorReading
+    OnCommErrorWriting = SerialPortDriver1CommErrorWriting
+    Left = 360
+    Top = 72
+  end
+  object ModBusRTUDriver1: TModBusRTUDriver
+    CommunicationPort = SerialPortDriver1
+    ReadOnly = False
+    Left = 352
+    Top = 40
+  end
+  object Tag1: TPLCTagNumber
+    TagGUID = '{F7D060AF-B389-42CF-8D58-D94E3C98657B}'
+    OnValueChangeFirst = Tag1ValueChangeFirst
+    OnValueChangeLast = Tag1ValueChange
+    OnAsyncValueChange = Tag1AsyncValueChange
+    PLCRack = 0
+    PLCSlot = 0
+    PLCStation = 1
+    MemFile_DB = 0
+    MemAddress = 1
+    MemSubElement = 0
+    MemReadFunction = 3
+    MemWriteFunction = 16
+    ProtocolDriver = ModBusRTUDriver1
+    LongAddress = ''
+    TagType = pttWord
+    EnableMaxValue = False
+    EnableMinValue = False
+    OnUpdate = Tag1Update
+    Left = 368
+    Top = 104
+  end
+end
